@@ -9,11 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var result = RequestManager()
+    let myColor = UIColor(named: "BackgroundColor") ?? .black
+    
+    init(){
+        UITableView.appearance().backgroundColor = myColor
+    }
     
     var body: some View {
         
         NavigationView{
-                List(result.myData, id: \.id){ item in
+            List{
+                ForEach(result.myData, id: \.id){ item in
                     NavigationLink (
                         destination: PictureView(fullSizeImageUrl: item.url),
                         label: {
@@ -21,13 +27,16 @@ struct ContentView: View {
                         })
                         .navigationTitle("List")
                 }
-            
+                .listRowSeparator(.hidden)
+                .padding(.bottom, 8.0)
+                .listRowBackground(Color(myColor))
+            }
         }
-        .onAppear{
-            // old style request
-            //posts.standartRequest()
+            .onAppear{
+                // old style request
+                //posts.standartRequest()
+            }
         }
-    }
 }
 
 struct ContentView_Previews: PreviewProvider {

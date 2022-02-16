@@ -1,5 +1,5 @@
 //
-//  PictuteView.swift
+//  PictureView.swift
 //  myAP
 //
 //  Created by ak77m on 13.02.2022.
@@ -24,6 +24,9 @@ struct PictureView: View {
                         .aspectRatio(contentMode: .fit)
                 }
             }
+            .cornerRadius(15)
+            .padding()
+            
             VStack{
                 Spacer()
                 Text(fullSizeImageUrl)

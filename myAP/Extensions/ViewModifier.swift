@@ -13,18 +13,17 @@ extension Image {
         self
             .resizable()
             .frame(width: 100, height: 100, alignment: .center)
-            .cornerRadius(15)
-            .shadow(color: Color(uiColor: UIColor(named: "ShadowColor") ?? .black), radius: 2, x: 3, y: 3)
+            .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
     }
 }
 
 
 // MARK: - Custom Color (for future)
 extension Color {
-    static let lightBackgroundColor = Color.init(#colorLiteral(red: 0.968627451, green: 0.9843137255, blue: 0.9882352941, alpha: 1))
-    static let lightTextColor = Color.init(#colorLiteral(red: 0.968627451, green: 0.9843137255, blue: 0.9882352941, alpha: 1))
-    static let darkBackgroundColor = Color.init(#colorLiteral(red: 0.8392156863, green: 0.9019607843, blue: 0.9490196078, alpha: 1))
-    static let darkTextColor = Color.init(#colorLiteral(red: 0.7254901961, green: 0.8431372549, blue: 0.9176470588, alpha: 1))
+    static let lightBackgroundColor = Color.init(#colorLiteral(red: 0.9385425448, green: 0.9503578544, blue: 0.9501500726, alpha: 1))
+    static let lightTextColor = Color.init(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1))
+    static let darkBackgroundColor = Color.init(#colorLiteral(red: 0.07909170538, green: 0.07909170538, blue: 0.07909170538, alpha: 1))
+    static let darkTextColor = Color.init(#colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1))
 }
 
 
@@ -39,6 +38,7 @@ struct myStyle : ViewModifier {
             .foregroundColor(Color.lightTextColor)
             .cornerRadius(7)
             .shadow(color:.black, radius: 5, x: 5, y: 5)
+            
     }
 }
 
