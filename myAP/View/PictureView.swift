@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct PictureView: View {
-    @State var fullSizeImageUrl : String
+    @State var pictureUrl : String
+    @State var downloadDate : String
     
     var body: some View {
         ZStack{
             // I use force unwrap because AsyncImage can return nil in result. It's not a mistake I think
-            AsyncImage(url: URL(string: fullSizeImageUrl)!) { stage in
+            AsyncImage(url: URL(string: pictureUrl)!) { stage in
                 if let image = stage.image {
                     image
                         .resizable()
@@ -29,15 +30,16 @@ struct PictureView: View {
             
             VStack{
                 Spacer()
-                Text(fullSizeImageUrl)
+                Text(downloadDate)
             }
+        }.refreshable {
+            //
         }
-        
     }
 }
 
 struct PictureView_Previews: PreviewProvider {
     static var previews: some View {
-        PictureView(fullSizeImageUrl: "wrong url")
+        PictureView(pictureUrl: "", downloadDate: Date().formattedString())
     }
 }

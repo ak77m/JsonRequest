@@ -12,6 +12,8 @@ struct JsonStruct : Codable, Hashable {
     let id : Int
     let title : String
     let url : String
-    let thumbnailUrl : String
+   // let thumbnailUrl : String
+    var date: Date? 
+    
 }
 

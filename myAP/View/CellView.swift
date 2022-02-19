@@ -12,6 +12,7 @@ struct CellView: View {
     @State var postId : Int
     @State var postTitle : String
     
+    
     @Environment(\.colorScheme) var colorTheme
     
     var body: some View {

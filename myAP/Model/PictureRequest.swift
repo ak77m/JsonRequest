@@ -13,13 +13,13 @@ final class PictureRequest  {
     
     /// New style request using Combine
     func fetchPicture(for url: String?) -> AnyPublisher< UIImage?, Never> {
-       // URL(string: url) doesn't work with Optional We have to unwrap url before
         guard let url = url, let url = URL(string: url) else { return Just(nil).eraseToAnyPublisher() }
         
-            return URLSession.shared.dataTaskPublisher(for: url)
+        let request = URLRequest(url: url, cachePolicy: .returnCacheDataElseLoad, timeoutInterval: 60)
+
+            return URLSession.shared.dataTaskPublisher(for: request)
                 .map { UIImage(data:$0.data) }
                 .replaceError(with: nil)
-                .receive(on: RunLoop.main)
                 .eraseToAnyPublisher()
         }
 }

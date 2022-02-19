@@ -13,7 +13,8 @@ final class RequestManager: ObservableObject {
 
     @Published var url = "https://jsonplaceholder.typicode.com/photos"
     @Published var myData = [JsonStruct]()
-   
+    
+    private let defaultValue = UserDefaults.standard.structArrayData(JsonStruct.self, forKey: "cache")    
     private var cancellableSet: Set<AnyCancellable> = []
     
     init() {
@@ -22,7 +23,17 @@ final class RequestManager: ObservableObject {
             .flatMap { (url) -> AnyPublisher<[JsonStruct], Never> in
                 JsonRequest.shared.fetchData(for: url)
             }
-            .assign(to: \.myData, on: self)
+            .receive(on: RunLoop.main)
+            .sink{
+                if $0.isEmpty {
+                    self.myData = self.defaultValue}
+                else {
+                    self.myData = $0
+                    self.myData.indices.forEach { self.myData[$0].date = Date() }
+                    UserDefaults.standard.setStructArray(self.myData, forKey: "cache")
+                }
+                
+            }
             .store(in: &self.cancellableSet)
     }
 
@@ -32,10 +43,8 @@ final class RequestManager: ObservableObject {
     func standartRequest ()  {
         JsonRequest.shared.standartRequest(url) { array in
             self.myData = array
-            print("it's Works")
         }
     }
-    
 }
 
 

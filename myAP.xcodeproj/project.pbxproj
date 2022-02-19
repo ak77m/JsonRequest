@@ -10,6 +10,7 @@
 		FF0D90DF27BAD68E008F81D2 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = FF0D90DE27BAD68E008F81D2 /* Readme.md */; };
 		FF0D90E427BAF071008F81D2 /* ViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0D90E327BAF071008F81D2 /* ViewModifier.swift */; };
 		FF0D90F527BBBD4C008F81D2 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FF0D90F427BBBD4C008F81D2 /* .gitignore */; };
+		FF1871EE27BF8EAB0085E83D /* UserDefaults+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1871ED27BF8EAB0085E83D /* UserDefaults+Ext.swift */; };
 		FF6EFD9B27B92E2900995B1C /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6EFD9A27B92E2900995B1C /* CellView.swift */; };
 		FF6EFD9D27B943B000995B1C /* PictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6EFD9C27B943B000995B1C /* PictureView.swift */; };
 		FF6EFD9F27B94D3100995B1C /* PictureRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6EFD9E27B94D3100995B1C /* PictureRequest.swift */; };
@@ -21,12 +22,14 @@
 		FFDC6B2727AB0ECF00BE7E30 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDC6B2627AB0ECF00BE7E30 /* ContentView.swift */; };
 		FFDC6B2927AB0ED000BE7E30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFDC6B2827AB0ED000BE7E30 /* Assets.xcassets */; };
 		FFDC6B2C27AB0ED000BE7E30 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFDC6B2B27AB0ED000BE7E30 /* Preview Assets.xcassets */; };
+		FFE11F5F27C142770044540A /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE11F5E27C142770044540A /* Date+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FF0D90DE27BAD68E008F81D2 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		FF0D90E327BAF071008F81D2 /* ViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifier.swift; sourceTree = "<group>"; };
 		FF0D90F427BBBD4C008F81D2 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		FF1871ED27BF8EAB0085E83D /* UserDefaults+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Ext.swift"; sourceTree = "<group>"; };
 		FF4CA21527B7B6470034A51D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FF6EFD9A27B92E2900995B1C /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 		FF6EFD9C27B943B000995B1C /* PictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureView.swift; sourceTree = "<group>"; };
@@ -40,6 +43,7 @@
 		FFDC6B2627AB0ECF00BE7E30 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FFDC6B2827AB0ED000BE7E30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFDC6B2B27AB0ED000BE7E30 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FFE11F5E27C142770044540A /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				FF0D90E327BAF071008F81D2 /* ViewModifier.swift */,
+				FF1871ED27BF8EAB0085E83D /* UserDefaults+Ext.swift */,
+				FFE11F5E27C142770044540A /* Date+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -206,12 +212,14 @@
 				FFDC6B2727AB0ECF00BE7E30 /* ContentView.swift in Sources */,
 				FF7F804827AC70D600017B9D /* RequestManager.swift in Sources */,
 				FF7F804627AC69CD00017B9D /* JsonRequest.swift in Sources */,
+				FFE11F5F27C142770044540A /* Date+Ext.swift in Sources */,
 				FF0D90E427BAF071008F81D2 /* ViewModifier.swift in Sources */,
 				FF7F804327AC68B100017B9D /* JsonStruct.swift in Sources */,
 				FF6EFD9F27B94D3100995B1C /* PictureRequest.swift in Sources */,
 				FF6EFD9D27B943B000995B1C /* PictureView.swift in Sources */,
 				FF6EFDA127B94E7E00995B1C /* ImageManager.swift in Sources */,
 				FFDC6B2527AB0ECF00BE7E30 /* myAPApp.swift in Sources */,
+				FF1871EE27BF8EAB0085E83D /* UserDefaults+Ext.swift in Sources */,
 				FF6EFD9B27B92E2900995B1C /* CellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

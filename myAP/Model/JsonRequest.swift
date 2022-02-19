@@ -20,7 +20,7 @@ final class JsonRequest {
                 .map { $0.data }
                 .decode(type: [JsonStruct].self, decoder: JSONDecoder())
                 .replaceError(with: [])
-                .receive(on: RunLoop.main)
+               
                 .eraseToAnyPublisher()
         }
     
@@ -44,6 +44,4 @@ final class JsonRequest {
                 }
             }.resume()
         }
-    
-    
 }
