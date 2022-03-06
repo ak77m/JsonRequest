@@ -1,4 +1,7 @@
-#  MyAP
+#  JsonRequest
+
+Test task for parsing JSON with SwiftUI and Combine
+
 Тестовое приложение для запроса JSON c фиксированного адреса:
     "https://jsonplaceholder.typicode.com/photos"
 
@@ -11,4 +14,3 @@
 - для отображение полного экрана используется AsyncImage. Там все проще  
 
 Json можно запросить в двух вариантах: Combine и традиционный.  
- 
