@@ -14,7 +14,7 @@ final class RequestManager: ObservableObject {
     @Published var url = "https://jsonplaceholder.typicode.com/photos"
     @Published var myData = [JsonStruct]()
     
-    private let defaultValue = UserDefaults.standard.structArrayData(JsonStruct.self, forKey: "cache")    
+    private let defaultValue = UserDefaults.standard.getArrayData(JsonStruct.self, forKey: "cache")    
     private var cancellableSet: Set<AnyCancellable> = []
     
     init() {

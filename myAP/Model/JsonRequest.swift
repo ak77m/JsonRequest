@@ -16,13 +16,13 @@ final class JsonRequest {
         guard let url = URL(string: url) else {
             return Just([JsonStruct]()).eraseToAnyPublisher()
         }
-            return URLSession.shared.dataTaskPublisher(for: url)
-                .map { $0.data }
-                .decode(type: [JsonStruct].self, decoder: JSONDecoder())
-                .replaceError(with: [])
-               
-                .eraseToAnyPublisher()
-        }
+        return URLSession.shared.dataTaskPublisher(for: url)
+            .map { $0.data }
+            .decode(type: [JsonStruct].self, decoder: JSONDecoder())
+            .replaceError(with: [])
+        
+            .eraseToAnyPublisher()
+    }
     
     /// Old style request
     func standartRequest (_ url: String, _ completion: @escaping ([JsonStruct]) -> () )  {

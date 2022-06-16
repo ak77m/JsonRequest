@@ -15,7 +15,7 @@ extension UserDefaults {
         set(data, forKey: defaultName)
     }
     
-    func structArrayData<T>(_ type: T.Type, forKey defaultName: String) -> [T] where T : Decodable {
+    func getArrayData<T>(_ type: T.Type, forKey defaultName: String) -> [T] where T : Decodable {
         guard let encodedData = array(forKey: defaultName) as? [Data] else {
             return []
         }
